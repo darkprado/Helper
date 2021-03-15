@@ -1,1 +1,16 @@
+#PORT
+server:
+  port: 8080
 
+#LOGGER
+logging:
+  level:
+    root: INFO
+    my.project.home.analyzer: DEBUG
+
+spring:
+  datasource:
+    url: ${DATABASE_URL:jdbc:postgresql://localhost:5432/postgres?currentSchema=public}
+    username: ${DATABASE_USERNAME:postgres}
+    password: ${DATABASE_PASSWORD:123}
+    driver-class-name: org.postgresql.Driver
