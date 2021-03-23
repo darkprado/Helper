@@ -14,3 +14,8 @@ spring:
     username: ${DATABASE_USERNAME}
     password: ${DATABASE_PASSWORD}
     driver-class-name: org.postgresql.Driver
+  profiles:
+    active: local
+
+web:
+  welcome: <h1><font face='verdana'>Spring boot rocks!</font></h1>

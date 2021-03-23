@@ -1,0 +1,2 @@
+web:
+  welcome: <h1><font face='verdana'>Spring boot rocks! Local profile</font></h1>
