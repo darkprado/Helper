@@ -1,5 +1,6 @@
 package my.home.helper;
 
+import my.home.helper.service.StringResponseService;
 import org.springframework.boot.Banner;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -44,7 +45,7 @@ public class HelperApplication implements CommandLineRunner {
 
     @Order(1)
     @Bean
-    CommandLineRunner myRunner() {
-        return args -> System.out.println("Hello runner with bean!");
+    CommandLineRunner myRunner(StringResponseService service) {
+        return args -> service.send("Hello");
     }
 }

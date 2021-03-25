@@ -7,3 +7,18 @@ spring:
       name: topicName
     bootstrapAddress: localhost:9092
     group-id: server.broadcast
+  cloud:
+    stream:
+      default-binder: kafka
+      kafka:
+        binder:
+          brokers:
+            - localhost:9092
+          auto-create-topics: true
+      bindings:
+        string-request:
+          binder: kafka
+          destination: kafkaStream
+        string-response:
+          binder: kafka
+          destination: kafkaStream
