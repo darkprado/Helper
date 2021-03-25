@@ -5,12 +5,13 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Profile;
 import org.springframework.core.annotation.Order;
 import org.springframework.core.env.Environment;
+import org.springframework.kafka.annotation.EnableKafka;
 
 import java.io.PrintStream;
 
+@EnableKafka
 @SpringBootApplication
 public class HelperApplication implements CommandLineRunner {
 
